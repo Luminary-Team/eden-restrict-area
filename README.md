@@ -1,4 +1,4 @@
-<h1 align="center">Restrict App - Projeto</h1>
+<h1 align="center">Restrict Area - Projeto</h1>
 
 <p align="center">
   <strong>Disciplinas:</strong> Desenvolvimento e Aplicação Dinâmica & Desenvolvimento I (2º Ano)
