@@ -18,6 +18,8 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   z-index: 1;
   padding: 10px;
+  height: 5rem;
+  display: inline-table;
 }
 
 .container {
@@ -126,4 +128,8 @@ main {
   #botao-dashboard {
     margin-top: 50px;
   }
+}
+
+a {
+  text-decoration: none;
 }
