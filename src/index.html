@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Restrita</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área Restrita - Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <script src="./js/powerbi.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-esquerda">
+          <img src="./imagens/logoEden.png" alt="logo" id="edenLogo" />
+        </div>
+        <div class="header-center">
+          <h1>Bem-vindo à Área Restrita</h1>
+        </div>
+        <div class="header-direita">
+          <nav>
+            <ul>
+              <li><a href="#" id="menu-app">App</a></li>
+              <li><a href="#" id="menu-quemsomos">Quem Somos</a></li>
+            </ul>
+            <button id="logout">Sair</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <button id="botao-dashboard">Mostrar Gráficos</button>
+
+      <section id="dashboard" style="display: none">
+        <h2>Dashboard de Dados</h2>
+        <div id="powerbi-container"></div>
+      </section>
+    </main>
+  </body>
 </html>
