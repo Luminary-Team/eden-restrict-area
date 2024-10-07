@@ -113,27 +113,6 @@ main {
   background-color: #f5f5f5;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .header-esquerda,
-  .header-center,
-  .header-direita {
-    justify-content: center;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  #botao-dashboard {
-    margin-top: 50px;
-  }
-}
-
 a {
   text-decoration: none;
 }
