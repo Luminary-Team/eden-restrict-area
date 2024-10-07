@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .header-esquerda,
+  .header-center,
+  .header-direita {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  #botao-dashboard {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 678px) {
+    #botao-dashboard {
+        margin-top: 10rem;
+    }
+}
