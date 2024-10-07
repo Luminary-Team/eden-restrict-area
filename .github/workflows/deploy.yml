@@ -2,19 +2,16 @@ name: Deploy para Render
 
 on:
   push:
-    branches:
-      - main 
+    branches: [ "main" ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checar o código
-      uses: actions/checkout@v2
-
-    - name: Deploy para Render
+    - name: Deploy Render
       uses: johnbeynon/render-deploy-action@a0588f9aca995a15d69a72cb2bfbf37c12e5b540
       with:
         apiKey: ${{ secrets.RENDER_API_KEY }}
         serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+        wait-for-success: true
