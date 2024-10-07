@@ -1,6 +1,13 @@
 <h1 align="center">Restrict Area - Projeto</h1>
 
 <p align="center">
+  <a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"></a>
+  <a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+  <a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+</p>
+
+<p align="center">
   <strong>Disciplinas:</strong> Desenvolvimento e Aplicação Dinâmica & Desenvolvimento I (2º Ano)
 </p>
 
