@@ -26,7 +26,21 @@
 
 <h2>📂 Estrutura do Repositório</h2>
 <ul>
-  <li><strong>index.html</strong></li>
+  <li>css</li>
+  <ul>
+    <li>media-query.css</li>
+    <li>style.css</li>
+  </ul>
+  <li>imagens</li>
+  <ul>
+    <li>logoEden.png</li>
+  </ul>
+  <li>js</li>
+  <ul>
+    <li>powerbi.js</li>
+    <li>script.js</li>
+  </ul>
+  index.html
 </ul>
 
 <h2>📚 Sobre o Projeto</h2>
