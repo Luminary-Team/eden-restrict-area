@@ -13,24 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
   });
 
-  botaoDashboard.addEventListener(
-    "click",
-    (e) => {
-      console.log("clicado " + e.target);
-      const dashboardVisivel = dashboard.style.display === "block";
+botaoDashboard.addEventListener("click", handleButtonClick, true);
+botaoDashboard.addEventListener("touchstart", handleButtonClick, true);
 
-      if (dashboardVisivel) {
-        dashboard.style.display = "none";
-        botaoDashboard.innerHTML = "Mostrar Gráficos";
-        localStorage.setItem("showDashboard", "false");
-      } else {
-        dashboard.style.display = "block";
-        botaoDashboard.innerHTML = "Ocultar Gráficos";
-        localStorage.setItem("showDashboard", "true");
-      }
-    },
-    true
-  );
+function handleButtonClick(e) {
+  console.log("clicado " + e.target);
+  const dashboardVisivel = dashboard.style.display === "block";
+
+  if (dashboardVisivel) {
+    dashboard.style.display = "none";
+    botaoDashboard.innerHTML = "Mostrar Gráficos";
+    localStorage.setItem("showDashboard", "false");
+  } else {
+    dashboard.style.display = "block";
+    botaoDashboard.innerHTML = "Ocultar Gráficos";
+    localStorage.setItem("showDashboard", "true");
+  }
+}
+
 
   sair.addEventListener("click", function (e) {
     console.log("saindo " + e.target);
