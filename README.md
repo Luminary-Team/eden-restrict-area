@@ -26,7 +26,9 @@
 
 <h2>📂 Estrutura do Repositório</h2>
 <ul>
-  <li><strong>index.html</strong></li>
+  <li>css</li>
+  <li>imagens</li>
+  <li>js</li>
 </ul>
 
 <h2>📚 Sobre o Projeto</h2>

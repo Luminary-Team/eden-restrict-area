@@ -10,6 +10,18 @@ body {
   margin-top: 100px;
 }
 
+.btn {
+  background-color: #674CF7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.btn:hover {
+  background-color: #2825C8;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -77,15 +89,7 @@ nav ul li a:hover {
 }
 
 #logout {
-  background-color: #674CF7;
-  color: white;
-  border: none;
-  cursor: pointer;
   padding: 10px;
-}
-
-#logout:hover {
-  background-color: #2825C8;
 }
 
 main {
@@ -103,8 +107,8 @@ main {
 
 #dashboard {
   margin-top: 20px;
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+
 }
 
 #powerbi-container {

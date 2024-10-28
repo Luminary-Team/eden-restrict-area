@@ -15,18 +15,18 @@
   }
 
   #botao-dashboard {
-    margin-top: 50px;
+    margin-top: 10rem;
   }
 }
 
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1.5rem;
-    }
+@media (max-width: 437px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
-@media (max-width: 678px) {
-    #botao-dashboard {
-        margin-top: 10rem;
-    }
+@media (max-width: 220px) {
+  #botao-dashboard {
+    margin-top: 11rem;
+  }
 }

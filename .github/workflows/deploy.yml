@@ -12,6 +12,6 @@ jobs:
     - name: Deploy Render
       uses: johnbeynon/render-deploy-action@a0588f9aca995a15d69a72cb2bfbf37c12e5b540
       with:
-        apiKey: ${{ secrets.RENDER_API_KEY }}
-        serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+        api-key: ${{ secrets.API_KEY }}
+        service-id: ${{ secrets.SERVICE_ID }}
         wait-for-success: true
