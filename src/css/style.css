@@ -11,7 +11,7 @@ body {
 }
 
 .btn {
-  background-color: #674CF7;
+  background-color: #0080ff;
   color: white;
   border: none;
   cursor: pointer;
@@ -19,7 +19,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #2825C8;
+  background-color: #0080ff;
 }
 
 header {
@@ -80,11 +80,11 @@ nav ul {
 
 nav ul li {
   margin: 0 15px;
-  color: #2825C8;
+  color: #0080ff;
 }
 
 nav ul li a:hover {
-  color: #22216C;
+  color: #0080ff;
   cursor: pointer;
 }
 
@@ -108,7 +108,6 @@ main {
 #dashboard {
   margin-top: 20px;
   width: 90%;
-
 }
 
 #powerbi-container {
@@ -119,4 +118,5 @@ main {
 
 a {
   text-decoration: none;
+  padding: 0.6rem;
 }

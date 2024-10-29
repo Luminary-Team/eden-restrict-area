@@ -1,4 +1,4 @@
-const embedUrl = 'https://app.powerbi.com/reportEmbed?reportId=ab455629-55b7-400e-90b7-8745d8b5c5c5&autoAuth=true&ctid=b148f14c-2397-402c-ab6a-1b4711177ac0'; // Substitua pela URL de incorporação do Power BI
+const embedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiYjFiZTkxMzctMDI2Yy00NjgxLThjMGYtYjFiOWMyNTRiOWU1IiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9';
 const powerbiContainer = document.getElementById('powerbi-container');
 
 function loadPowerBI() {
