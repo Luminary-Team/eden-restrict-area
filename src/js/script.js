@@ -13,8 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
   });
 
-botaoDashboard.addEventListener("click", handleButtonClick, true);
-botaoDashboard.addEventListener("touchstart", handleButtonClick, true);
+botaoDashboard.addEventListener("click", handleButtonClick);
+botaoDashboard.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  handleButtonClick(e);
+});
+
 
 function handleButtonClick(e) {
   console.log("clicado " + e.target);
