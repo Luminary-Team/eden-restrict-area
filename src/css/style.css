@@ -15,11 +15,11 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 
 .btn:hover {
-  background-color: #0080ff;
+  background-color: #00A3FF;
 }
 
 header {
@@ -96,11 +96,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 150px;
 }
 
 #botao-dashboard {
-  margin-top: 100px;
   padding: 10px;
   font-size: 1rem;
 }
@@ -119,4 +119,8 @@ main {
 a {
   text-decoration: none;
   padding: 0.6rem;
+}
+
+p { 
+  margin-bottom: 50px;
 }
