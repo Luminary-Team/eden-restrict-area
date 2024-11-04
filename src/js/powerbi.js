@@ -1,14 +1,28 @@
-const embedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiYjFiZTkxMzctMDI2Yy00NjgxLThjMGYtYjFiOWMyNTRiOWU1IiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9';
-const powerbiContainer = document.getElementById('powerbi-container');
+let urlDesktop =
+  "https://app.powerbi.com/view?r=eyJrIjoiYjFiZTkxMzctMDI2Yy00NjgxLThjMGYtYjFiOWMyNTRiOWU1IiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9";
+
+const urlMobile =
+  "https://app.powerbi.com/view?r=eyJrIjoiZmE5OWFlOWUtNzUyZS00ZTAyLWFmM2MtNmQwODhlYzViZDUwIiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9";
+
+const powerbiContainer = document.getElementById("powerbi-container");
 
 function loadPowerBI() {
-    const iframe = document.createElement('iframe');
-    iframe.src = embedUrl;
-    iframe.width = '100%';
-    iframe.height = '100%';
-    iframe.frameBorder = '0';
+  if (window.innerWidth <= 768) {
+    urlDesktop = urlMobile;
+  }
 
-    powerbiContainer.appendChild(iframe);
+  const iframe = document.createElement("iframe");
+  iframe.src = urlDesktop;
+  iframe.width = "100%";
+  iframe.height = "100%";
+  iframe.frameBorder = "0";
+
+  powerbiContainer.appendChild(iframe);
 }
 
-document.addEventListener('DOMContentLoaded', loadPowerBI);
+document.addEventListener("DOMContentLoaded", loadPowerBI);
+
+window.addEventListener("resize", () => {
+  powerbiContainer.innerHTML = "";
+  loadPowerBI();
+});
