@@ -1,3 +1,15 @@
+@media (min-width: 1200px) {
+  p { 
+    margin: 0px 300px 50px 300px;
+  }  
+}
+
+@media (max-width: 1200px) {
+  p { 
+    margin: 0px 200px 50px 200px;
+  }  
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -17,10 +29,23 @@
   main {
     margin-top: 15rem;
   }
+
+  header {
+    padding: 8px;
+  }
+
+  p { 
+    margin: 0px 100px 50px 100px;
+  }
 }
 
 @media (max-width: 437px) {
   h1 {
     font-size: 1.5rem;
   }
+
+  p { 
+    margin: 0px 50px 50px 50px;
+  }
+  
 }
