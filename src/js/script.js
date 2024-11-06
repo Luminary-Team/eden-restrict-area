@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const botaoDashboard = document.getElementById("botao-dashboard");
   const sair = document.getElementById("logout");
   const logo = document.getElementById("edenLogo");
+  const aviso = document.getElementById("aviso");
+  const conteudo = document.getElementById("conteudo");
 
   // verifica para a web view se o storage está disponível
   const isLocalStorageAvailable = () => {
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // o estado da web view
   const storageEnabled = isLocalStorageAvailable();
 
-  // mostra o dashboard
+  // mostra o dashboard se o storage estiver habilitado e salvo como "true"
   if (storageEnabled && localStorage.getItem("showDashboard") === "true") {
     dashboard.style.display = "block";
     botaoDashboard.innerHTML = "Ocultar Gráficos";
@@ -33,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // função para mostrar o dashboard ou ocultar
   function handleButtonClick(e) {
-    console.log("clicado " + e.target);
     const dashboardVisivel = dashboard.style.display === "block";
-
     if (dashboardVisivel) {
       dashboard.style.display = "none";
       botaoDashboard.innerHTML = "Mostrar Gráficos";
@@ -59,28 +59,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   sair.addEventListener("click", function (e) {
-    console.log("saindo " + e.target);
     if (storageEnabled) {
       localStorage.clear();
     }
     window.location.reload();
-    window.location.href = 'https://eden-landing-page.onrender.com/';
+    window.location.href = "https://eden-landing-page.onrender.com/";
   });
 
-  // função para trocar de paragrafo quando for mobile
-  function inserirParagrafo() {
-    const paragrafo = document.getElementById("conteudo")
-    paragrafo.textContent =
-      "Aqui nós temos um gráfico feito na plataforma PowerBI Desktop pelos integrantes de Dados do 2° ano para o admin poder ver tudo sobre as notícias das pessoas que participaram da feira. Nos mostrando a <strong>Média de Notas, Ocorrências por empresas, Notas por Empresas</strong>, etc.";
+  const paragrafoMobile = "Aqui nós temos um gráfico feito na plataforma PowerBI Desktop pelos integrantes de Dados do 2° ano para o admin poder ver tudo sobre as notícias das pessoas que participaram da feira. Nos mostrando a Média de Notas, Ocorrências por empresas, Notas por Empresas, etc.";
+  const paragrafoDesktop = "Aqui nós temos um gráfico feito na plataforma PowerBI Desktop pelos integrantes de Dados do 2° ano para o admin poder ver tudo sobre os pessoas que aceitaram ou não serem usuários de nosso aplicativo. Mostrando as <strong>Formas de Descarte, Produtos Descartados, Contagem de Respostas por Dias as Cidades onde moram</strong>, etc.";
 
-    if (window.innerWidth <= 768 && document.getElementById("paragrafo-dinamico")) {
-      paragrafo.id = "paragrafo-dinamico";
-      dashboard.appendChild(paragrafo);
-    } else if (window.innerWidth > 768 && document.getElementById("paragrafo-dinamico")) {
-      document.getElementById("paragrafo-dinamico").remove();
+  function gerenciarParagrafos() {
+    if (window.innerWidth <= 768) {
+      conteudo.innerText = paragrafoMobile;
+      aviso.style.display = "none";
+    } else {
+      conteudo.innerHTML = paragrafoDesktop;
+      aviso.style.display = "block";
     }
   }
 
-  inserirParagrafo();
-  window.addEventListener("resize", inserirParagrafo);
+  gerenciarParagrafos();
+  window.addEventListener("resize", gerenciarParagrafos);
 });
